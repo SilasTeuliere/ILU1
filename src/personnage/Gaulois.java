@@ -64,11 +64,12 @@ public class Gaulois{
 			System.out.println(" « Je donne au musee tous mes trophees :");
 			for(int i = 0; i < nb_trophees; i++ ) {
 				if(i == nb_trophees-1) {
-					musee.donnerTrophees(musee.getReserve()[musee.getNbTrophee()].getGaulois(), trophees[i]);
+					//musee.getReserve()[musee.getNbTrophee()].getGaulois()
+					musee.donnerTrophees(new Gaulois(getNom(), getForce()), trophees[i]);
 					System.out.println("- " + trophees[i] + " »");
 				}
 				else {
-					musee.donnerTrophees(musee.getReserve()[musee.getNbTrophee()].getGaulois(), trophees[i]);
+					musee.donnerTrophees(new Gaulois(getNom(), getForce()), trophees[i]);
 					System.out.println("- " + trophees[i]);
 				}
 			}
