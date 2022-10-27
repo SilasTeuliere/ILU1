@@ -49,10 +49,9 @@ public class Druide {
 	}
 	
 	public void booster(Gaulois nom) {
-		// TODO Auto-generated method stub
-		if (nom.getNom().equals("Ob lix")) {
-			parler("Non, Ob lix !... Tu n'auras pas de potion magique !");
-			nom.parler("Par B l nos, ce n'est pas juste");
+		if (nom.getNom().equals("Obélix")) {
+			parler("Non, Obélix !... Tu n'auras pas de potion magique !");
+			nom.parler("Par Bélénos, ce n'est pas juste");
 			
 		}
 		else {

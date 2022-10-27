@@ -9,6 +9,7 @@ import personnage.Romain;
 public class Scenario {
 
 	public static void main(String[] args) {
+		int frp = 0;
 		Druide druide = new Druide("Panoramix", 5, 10);
 		druide.parler("Je vais aller préparer une petite potion...");
 		druide.preparerPotion();
@@ -26,16 +27,21 @@ public class Scenario {
 		minus.parler("UN GAU... UN GAUGAU...");
 		do {
 			asterix.frapper(minus);
-		} while (minus.getForce() > 0);
+			frp++;
+		} while (minus.getForce() > 0 && frp == 10 );
 		milexcus.parler("UN GAU... UN GAUGAU...");
+		frp = 0;
 		do {
 			asterix.frapper(milexcus);
-		} while (milexcus.getForce() > 0);
+			frp++;
+		} while (milexcus.getForce() > 0 && frp == 10);
 		
 //		Partie a decommenter
 		
 		Musee musee = new Musee();
 		asterix.faireUneDonnation(musee);
+		System.out.println(musee.extraireInstructionsCaml());
+		
 
 	}
 }

@@ -13,6 +13,10 @@ public class Gaulois{
 		this.nom = nom;
 		this.force = force;
 	}
+	
+	public int getNb_trophees() {
+		return nb_trophees;
+	}
 
 	
 	public int getForce() {
@@ -65,11 +69,11 @@ public class Gaulois{
 			for(int i = 0; i < nb_trophees; i++ ) {
 				if(i == nb_trophees-1) {
 					//musee.getReserve()[musee.getNbTrophee()].getGaulois()
-					musee.donnerTrophees(new Gaulois(getNom(), getForce()), trophees[i]);
+					musee.donnerTrophees(this, trophees[i]);
 					System.out.println("- " + trophees[i] + " »");
 				}
 				else {
-					musee.donnerTrophees(new Gaulois(getNom(), getForce()), trophees[i]);
+					musee.donnerTrophees(this, trophees[i]);
 					System.out.println("- " + trophees[i]);
 				}
 			}
