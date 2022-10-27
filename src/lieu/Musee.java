@@ -24,10 +24,10 @@ public class Musee {
 		String texte = " let musee = [";
 		for(int i = 0; i < nbTrophee; i++) {
 			if(i == nbTrophee-1) {
-				texte = texte + "\n\""+ reserve[i].donneNom() +"\", \"" + reserve[i].getEquipement() + "\"\n";
+				texte = texte + "\n	\""+ reserve[i].donneNom() +"\", \"" + reserve[i].getEquipement() + "\"\n";
 			}
 			else {
-				texte = texte + "\n\""+ reserve[i].donneNom() +"\", \"" + reserve[i].getEquipement() + "\";";
+				texte = texte + "\n	\""+ reserve[i].donneNom() +"\", \"" + reserve[i].getEquipement() + "\";";
 			}
 		}
 		texte = texte + "]";
